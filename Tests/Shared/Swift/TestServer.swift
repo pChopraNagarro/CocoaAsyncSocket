@@ -59,8 +59,8 @@ class TestServer: NSObject {
 
 	typealias Callback = TestSocket.Callback
 
-	var onAccept: Callback
-	var onDisconnect: Callback
+	var onAccept: Callback = nil
+	var onDisconnect: Callback = nil
 
 	let port: UInt16 = TestServer.randomValidPort()
 	let queue = DispatchQueue(label: "com.asyncSocket.TestServerDelegate")
